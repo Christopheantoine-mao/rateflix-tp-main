@@ -1,0 +1,214 @@
+{
+    "info": {
+        "name": "Rateflix API",
+        "_postman_id": "47773641-1638-4dc3-8898-5079cf46dbab",
+        "description": "Collection for testing Rateflix API endpoints",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Movies",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:5000/movies",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "movies"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Add New Movie",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\": \"Inception\", \"genre\": \"Sci-Fi\", \"release_date\": \"2010-07-16\", \"rating\": 8.8}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/movies",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "movies"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Movie",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\": \"Inception Updated\", \"genre\": \"Sci-Fi\", \"release_date\": \"2010-07-16\", \"rating\": 9.0}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/movies/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "movies",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Movie",
+            "request": {
+                "method": "DELETE",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:5000/movies/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "movies",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Reviews",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:5000/reviews",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "reviews"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Add New Review",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"movie_or_show_id\": 1, \"user\": \"John Doe\", \"review\": \"Great movie!\", \"rating\": 9.0, \"created_at\": \"2024-05-26T00:00:00.000Z\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/reviews",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "reviews"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Review",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"review\": \"Updated review\", \"rating\": 9.5}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/reviews/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "reviews",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Review",
+            "request": {
+                "method": "DELETE",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost:5000/reviews/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "reviews",
+                        "1"
+                    ]
+                }
+            }
+        }
+    ]
+}
